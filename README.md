@@ -1,100 +1,188 @@
-# MD Robeul Islam
+<div align="center">
 
-I build AI agents that do real engineering work, and the guardrails that make their output trustworthy.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:7c3aed&height=220&section=header&text=MD%20Robeul%20Islam&fontSize=56&fontColor=ffffff&fontAlignY=38&desc=AI%20agents%20that%20do%20real%20engineering%20work%2C%20and%20the%20guardrails%20that%20make%20them%20trustworthy&descSize=17&descAlignY=58&animation=fadeIn" width="100%" alt="banner" />
 
-Most of my day is spent running Claude Code sessions against live servers, data pipelines and product codebases. The interesting part is not the prompt. It is the machinery around the agent: what it is allowed to touch, what proves its work, and what stops a mistake from leaving the building.
+<a href="https://github.com/mdrobeulislam1251-ux">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3200&pause=900&color=A78BFA&center=true&vCenter=true&width=720&lines=Agent+harnesses+with+hard+gates;Build%2C+do+not+describe;Decide+and+do.+Never+fake+it.;Every+rule+is+a+mechanism%2C+not+a+habit;Live+beats+notes." alt="typing" />
+</a>
 
-This page is the short version of that machinery.
+<br/>
 
----
+<img src="https://img.shields.io/badge/Claude_Code-agent_harnesses-7c3aed?style=for-the-badge&logo=anthropic&logoColor=white" />
+<img src="https://img.shields.io/badge/B2B_data-pipelines-1e3a8a?style=for-the-badge&logo=databricks&logoColor=white" />
+<img src="https://img.shields.io/badge/self--hosted-infra-0f766e?style=for-the-badge&logo=linux&logoColor=white" />
+<img src="https://komarev.com/ghpvc/?username=mdrobeulislam1251-ux&style=for-the-badge&color=7c3aed&label=visitors" />
 
-## The idea in one line
+</div>
 
-**Every rule is backed by a mechanism, not a habit.** If a mechanism stops being true, that is an incident. Fix the mechanism, never trust the habit.
+<br/>
 
----
+## 🧠 What I do
 
-## Six guarantees the dev loop enforces
+I run Claude Code sessions against live servers, data pipelines and product codebases. The interesting part is not the prompt. It is the **machinery around the agent**: what it may touch, what proves its work, and what stops a mistake from leaving the building.
 
-| # | Guarantee | What enforces it |
-|---|---|---|
-| 1 | All development commits on the dev server, through gates | A `commit` command runs the workspace's gates (typecheck, API-drift check, any declared sweep contract). A failure blocks the commit and posts the error to the tracking issue. Code edits are refused at the tool layer until an issue is claimed, and an issue can only be claimed inside its own workspace. |
-| 2 | The dev server can never push to GitHub | No credential helper, no stored token, no `gh` on the box. `git push` is denied in every workspace's settings. A push attempt gets a 401. |
-| 3 | Server to laptop only when I ask | Nothing automatic exists. No cron, no watcher, no timer. |
-| 4 | Laptop to GitHub: one dev branch only | The branch name is hardcoded in the publish script. The server-side pipeline refuses commits on `main`, `master`, `staging` and friends. |
-| 5 | The product owner merges when I say | `main` is read-only to this whole system. The only interaction with it is a read-only report of what landed there. |
-| 6 | No server credentials ever reach GitHub | A content-scanning guard runs on every publish. It aborts on secret material (JWTs, live API keys, signing secrets, tokens, private keys). The app publish is a filtered single-commit export, so the server's full history never leaves the server. |
+> **Every rule is backed by a mechanism, not a habit.** If a mechanism stops being true, that is an incident. Fix the mechanism, never trust the habit.
 
-Measured, not assumed: on the last audit the guard cleared every tracked file and withheld zero. It still runs on every push, because that is what proves the zero.
+<br/>
 
----
+## 🛠️ Stack
 
-## The loop, end to end
+<div align="center">
 
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=ts,nextjs,react,nodejs,python,fastapi,postgres,supabase,elasticsearch,docker,linux,bash,nginx,cloudflare,git,github,githubactions,vercel,kotlin,androidstudio&perline=10&theme=dark" alt="stack" />
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" />
+<img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" />
+<img src="https://img.shields.io/badge/Tailscale-242424?style=flat-square&logo=tailscale&logoColor=white" />
+<img src="https://img.shields.io/badge/Caddy-1F88C0?style=flat-square&logo=caddy&logoColor=white" />
+<img src="https://img.shields.io/badge/systemd-30D475?style=flat-square&logo=linux&logoColor=black" />
+<img src="https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white" />
+<img src="https://img.shields.io/badge/Linear-5E6AD2?style=flat-square&logo=linear&logoColor=white" />
+<img src="https://img.shields.io/badge/MCP-servers-7c3aed?style=flat-square" />
+
+</div>
+
+<br/>
+
+## 🔁 How my dev loop works
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Six guarantees, each enforced
+
+| # | Guarantee | Mechanism |
+|:-:|---|---|
+| 1 | Dev work commits on the dev server, **through gates** | typecheck · API-drift · sweep contract. Fail = no commit, error posted to the issue. Edits are refused until an issue is claimed. |
+| 2 | The dev server **can never push** to GitHub | No token, no credential helper, no `gh`. `git push` denied in settings. |
+| 3 | Server → laptop **only when I ask** | No cron, no watcher, no timer. By construction. |
+| 4 | Laptop → GitHub on **one dev branch** | Branch hardcoded in the publisher. Commits on `main` / `master` / `staging` refused server-side. |
+| 5 | The owner merges **when I say** | `main` is read-only to the whole system. |
+| 6 | **No credentials ever reach GitHub** | A content-scanning guard aborts on JWTs, live keys, tokens, private keys. Filtered one-commit publish; full history stays home. |
+
+</td>
+<td width="50%" valign="top">
+
+### The loop
+
+```text
+laptop   open the right workspace
+agent    claim an issue        -> edits unlock
+         build -> run -> observe  screenshots, curls
+         commit through gates  -> fail blocks + logs
+me       publish from laptop   -> guard first, read back
+         deploy                -> pull-based, /health must answer
+         say when to merge     -> main stays the owner's
 ```
-laptop:  open the right workspace            brain, gates and tracking live there
-agent:   claim an issue                      unlocks edits for that workspace only
-         build -> run -> observe             screenshots for UI, curls for APIs
-         commit through the pipeline         gates run; failure blocks and writes to the issue
-me:      publish from the laptop             dev branch only, guard first, read back after
-         deploy                              pull-based, read-only key, must answer /health
-         say when to merge                   main stays the owner's
+
+### When it goes wrong
+
+- 🔴 **Gates fail** → no commit, rework label, error as a comment, top of the queue
+- 🔴 **Wrong branch** → refused before anything is staged
+- 🔴 **Secret found** → push aborts before the fetch. Never withheld. Removed.
+- 🟡 **Work left on the floor** → stop hook names the uncommitted files
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+## 📜 What the agent is told
+
+<div align="center">
+
+| 🏗️ Build, do not describe | ⚡ Decide and do | 🚫 Never fake it |
+|:---:|:---:|:---:|
+| A write-up is not a deliverable unless docs were asked for | Pick, proceed, report. Stop only for a missing secret or an irreversible action | "Done" means it ran and was observed passing. If it was not run, say so |
+
+| 🎯 Answer the question asked | 🧪 Dev is not production | 💻 Nothing hosted on the laptop |
+|:---:|:---:|:---:|
+| A scoped request does not become an audit | Publishing is a deliberate act by a person | I work from several machines. Anything bound to one is invisible to the rest |
+
+</div>
+
+<br/>
+
+## 🖥️ How I treat servers
+
+```text
+Live beats notes        confirm the host, check its identity, stop if it does not match
+Report what you ran     every claim is "ran it", "read it", or UNVERIFIED
+Stay in scope           touch only the hosts named in the request
+Read-only by default    backup -> rollback written -> one change -> validate -> observe -> log
+Keep your own access    never restart SSH or the VPN on the box you are on
+Never bind 0.0.0.0      loopback or the private network only
+Secrets stay out        names and paths, never values
 ```
 
-A commit that passes leaves the issue **In Review**. That means the work is waiting for my publish, not that it shipped.
+<br/>
 
-Failure is routed straight back into coding with the evidence attached:
+## 🚀 Featured work
 
-- **Gates fail**: the commit never happens, the issue gets a rework label and the error output as a comment, and it sorts to the top of the queue.
-- **Wrong branch**: refused before anything is staged.
-- **Secret found**: the push aborts before the fetch. A secret is never merely withheld. It is removed.
-- **Work left on the floor**: a stop hook notices a claimed issue with uncommitted files and says so.
+<div align="center">
 
----
+<a href="https://github.com/mdrobeulislam1251-ux/T-Ex-LLM-Runpack">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mdrobeulislam1251-ux&repo=T-Ex-LLM-Runpack&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="T-Ex LLM Runpack" />
+</a>
+<a href="https://github.com/mdrobeulislam1251-ux/T-Ex-LLM---Agent">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mdrobeulislam1251-ux&repo=T-Ex-LLM---Agent&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="T-Ex LLM Agent" />
+</a>
+<a href="https://github.com/mdrobeulislam1251-ux/datryxen-claude">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=mdrobeulislam1251-ux&repo=datryxen-claude&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="datryxen-claude" />
+</a>
 
-## What the agent is told
+</div>
 
-These are the standing instructions in every workspace. They are not suggestions.
+**In private, same style:** a B2B lead-data platform with a five-workspace dev pipeline (web, API, MCP, Expo, KMP), a contact-search dashboard over tens of millions of records, scraper orchestration, and a self-hosted n8n stack.
 
-1. **Build, do not describe.** A write-up is not a deliverable unless docs were what was asked for.
-2. **Decide and do.** Pick, proceed, report. Stop only for a decision nobody else can make: a missing secret, or an irreversible external action.
-3. **Never fake it.** "Done" means it ran and was observed passing. "Should work" is not done. If it was not run, say so. This overrides autonomy.
-4. **Answer the question asked.** A scoped request does not become an audit. Scope creep buries the one finding that mattered.
-5. **This is dev, not production.** Publishing is a deliberate act by a person.
-6. **Nothing is hosted on the laptop.** I work from several machines. Anything bound to one of them is invisible from the others.
+<br/>
 
----
+## 📊 Stats
 
-## How I treat servers
+<div align="center">
 
-- **Live beats notes.** Docs go stale. Confirm the host before acting on it, and check its identity after connecting. If it does not match, stop.
-- **Report only what was verified.** Every claim is "ran it", "read it", or marked unverified. "Healthy" only comes from a check run in this session.
-- **Stay in scope.** Touch only the hosts named in the request. A doc that lists a host does not authorize work on it. This rule exists because it was once broken.
-- **Read-only by default.** To change something: read its state, take a timestamped backup, write down the rollback, make one change, validate, verify by observing the result, log it.
-- **Don't cut your own access.** Never restart SSH or the VPN on the box you are connected through.
-- **Never bind internal services to all interfaces.** Loopback or the private network, nothing else.
-- **Secrets stay out of output.** Record names and paths, never values.
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=mdrobeulislam1251-ux&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&include_all_commits=true&count_private=true" alt="stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mdrobeulislam1251-ux&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&langs_count=8" alt="languages" />
 
----
+<br/>
 
-## Memory that survives the session
+<img src="https://streak-stats.demolab.com?user=mdrobeulislam1251-ux&theme=tokyonight&hide_border=true&background=0d1117" alt="streak" />
 
-The agent's brain lives on the server, inside the workspaces, not in chat history. Every turn is captured, sessions that die without a clean exit are distilled at the next start, and retrieval ranks the whole episode corpus by relevance rather than recency. Decisions are written down separately from actions: git already records what was done, but it cannot tell you six weeks later why something was chosen or what was tried and rejected.
+<br/><br/>
 
----
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mdrobeulislam1251-ux&theme=tokyonight" width="100%" alt="profile details" />
 
-## Things I build
+<br/>
 
-| | |
-|---|---|
-| [T-Ex LLM Runpack](https://github.com/mdrobeulislam1251-ux/T-Ex-LLM-Runpack) | A company-in-a-box for terminal AI sessions: 53 specialist agents in 9 teams, 44 doctrine skills, a switchable company brain, and hard review gates. |
-| [T-Ex LLM Agent](https://github.com/mdrobeulislam1251-ux/T-Ex-LLM---Agent) | The self-hosted agent host. One-command install on your own VPS and your own Claude subscription, with chat channels and an ICP, lead-cleanup and n8n skill pack. |
-| [datryxen-claude](https://github.com/mdrobeulislam1251-ux/datryxen-claude) | Headless Claude Code orchestration on a subscription, no API key: classify, route, execute, report. |
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=mdrobeulislam1251-ux&theme=tokyonight&utcOffset=6" alt="productive time" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=mdrobeulislam1251-ux&theme=tokyonight" alt="commit languages" />
 
-Private work, in the same style: a B2B lead-data platform with a multi-workspace dev pipeline (web app, API server, MCP server, mobile and native apps), a contact-search dashboard over tens of millions of records, scraper orchestration, and a self-hosted n8n stack.
+<br/><br/>
 
----
+<img src="https://ghchart.rshah.org/7c3aed/mdrobeulislam1251-ux" width="100%" alt="contribution chart" />
 
-## Stack
+<br/>
 
-Claude Code and agent harnesses · TypeScript and Next.js · Python and FastAPI · Postgres and Supabase · Elasticsearch and OpenSearch · n8n · Linux, systemd, Caddy and Tailscale · Linear for intent, GitHub for published code
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mdrobeulislam1251-ux/mdrobeulislam1251-ux/output/github-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/mdrobeulislam1251-ux/mdrobeulislam1251-ux/output/github-snake.svg" width="100%" alt="contribution snake" />
+</picture>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<a href="https://github.com/mdrobeulislam1251-ux"><img src="https://img.shields.io/badge/GitHub-mdrobeulislam1251--ux-181717?style=for-the-badge&logo=github" /></a>
+<a href="mailto:mdrobeulislam1251@gmail.com"><img src="https://img.shields.io/badge/Email-say_hello-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:1e3a8a,100:0f172a&height=120&section=footer" width="100%" alt="footer" />
+
+</div>
