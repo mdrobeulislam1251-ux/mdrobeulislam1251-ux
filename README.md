@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:7c3aed&height=200&section=header&text=MD%20Robeul%20Islam&fontSize=54&fontColor=ffffff&fontAlignY=38&desc=AI-Native%20Data%20%26%20Automation%20Engineer&descSize=20&descAlignY=60&animation=fadeIn" width="100%" alt="banner" />
+<img src="assets/banner.svg" width="100%" alt="MD Robeul Islam, AI-Native Data & Automation Engineer" />
 
 </div>
 
@@ -348,6 +348,6 @@ Review gates by deliverable, from the runpack:
 <br/><br/>
 <sub>Remote on US hours from Bangladesh. Open to data-engineering and agent-infrastructure conversations.</sub>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:1e3a8a,100:0f172a&height=120&section=footer" width="100%" alt="footer" />
+<img src="assets/footer.svg" width="100%" alt="footer" />
 
 </div>
