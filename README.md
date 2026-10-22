@@ -120,7 +120,7 @@ Default to execution, not questions. Minimum-viable-correct: do it natively, don
 <img src="assets/system/head-9.svg" width="100%" alt="Activity: Shipping, in public" />
 
 <img height="170" src="https://github-readme-stats.vercel.app/api?username=mdrobeulislam1251-ux&include_all_commits=true&count_private=true&bg_color=0f172a&title_color=38bdf8&icon_color=a78bfa&text_color=8b9ab8&border_color=1e2a44&border_radius=20&show_icons=true" alt="GitHub stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=${a.login}&layout=compact&langs_count=8&${statsQ}" alt="Top languages" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mdrobeulislam1251-ux&layout=compact&langs_count=8&bg_color=0f172a&title_color=38bdf8&icon_color=a78bfa&text_color=8b9ab8&border_color=1e2a44&border_radius=20&show_icons=true" alt="Top languages" />
 
 <img src="https://streak-stats.demolab.com?user=mdrobeulislam1251-ux&background=0f172a&border=1e2a44&ring=38bdf8&fire=a78bfa&currStreakLabel=38bdf8&sideLabels=e6ecf8&currStreakNum=e6ecf8&sideNums=e6ecf8&dates=8b9ab8&stroke=1e2a44&border_radius=20" alt="Streak" />
 
