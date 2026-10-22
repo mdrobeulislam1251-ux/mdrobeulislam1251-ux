@@ -4,6 +4,14 @@
 
 </div>
 
+<div align="center">
+
+<a href="https://mdrobeulislam1251-ux.github.io/robeul-console/"><img src="assets/console-card.svg" width="100%" alt="Open Robeul Console, a live SaaS-style profile app built with Refine" /></a>
+
+<sub>👋 Welcome. The README is the summary; <a href="https://mdrobeulislam1251-ux.github.io/robeul-console/"><b>the console</b></a> is the full walkthrough.</sub>
+
+</div>
+
 <table>
 <tr>
 <td width="200" align="center" valign="middle">
@@ -339,6 +347,7 @@ Review gates by deliverable, from the runpack:
 
 <div align="center">
 
+<a href="https://mdrobeulislam1251-ux.github.io/robeul-console/"><img src="https://img.shields.io/badge/Robeul_Console-Open_the_app-0B1222?style=for-the-badge&logo=refine&logoColor=white" /></a>
 <a href="mailto:mdrobeulislam1251@gmail.com"><img src="https://img.shields.io/badge/Email-mdrobeulislam1251%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 <a href="https://www.linkedin.com/in/mdrobeulislam1251"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 <a href="https://github.com/mdrobeulislam1251-ux"><img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
