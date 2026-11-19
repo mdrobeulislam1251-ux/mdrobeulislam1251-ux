@@ -82,9 +82,9 @@
 | **AI & Agents** | Claude Agent SDK, Claude Code, Multi-agent orchestration, MCP, Prompt & context engineering, Retrieval & vector search, vLLM, Qwen, Chat-ops agents |
 | **Data** | Python, PostgreSQL, Supabase, Elasticsearch, OpenSearch, ClickHouse, ETL / ELT, Scraping at scale, Waterfall verification, Schema design, Warehouse modelling |
 | **APIs & Integrations** | REST / RPC API design, GraphQL, OpenAPI, MCP servers, FastAPI, Express, KrakenD, Authgear, Stripe |
-| **GTM Systems** | Apollo.io, ICP design & segmentation, B2B list building, Enrichment, MillionVerifier, Reacher, Deliverability, Smartlead, Instantly, HubSpot, RevOps data modelling |
+| **GTM Systems** | Apollo.io, ICP design & segmentation, B2B list building, Enrichment, MillionVerifier, Reacher, Deliverability, Smartlead, Instantly, HubSpot, CRM & API integrations, Lead routing, Web scraping, RevOps data modelling |
 | **Apps & Languages** | Python, TypeScript, JavaScript, SQL, Bash, Next.js, React, Node.js, Kotlin, Android, Swift |
-| **Professional** | Team leadership, Directing AI build agents, Client-facing problem solving, Technical documentation & standards, Founding a business, Async remote work with US teams |
+| **Professional** | Team leadership, Directing AI build agents, Client-facing problem solving, Technical documentation & standards, Early-stage product building, Async remote work with US teams, Remote contract or full-time, worldwide |
 
 </details>
 
